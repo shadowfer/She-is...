@@ -36,3 +36,12 @@ function resetAutoplay() {
   clearInterval(autoplayInterval);
   autoplayInterval = setInterval(moveCard, 4000);
 }
+document.addEventListener("DOMContentLoaded", function() {
+  const startButton = document.getElementById("start-button");
+  startButton.addEventListener("click", function() {
+    // Inicia la reproducción de la música
+    document.querySelector("audio").play();
+    // Oculta el botón después de que se hace clic
+    startButton.style.display = "none";
+  });
+});
